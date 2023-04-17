@@ -12,16 +12,16 @@ while True:
         break
 
 numero = random.randint(0,int(maximo))
-
+score = 0
 while True:
     adivinanza = int(input("¿Que numero piensas que es?: "))
     if int(adivinanza) > int(numero): 
         print("El numero es mas chico")
+        score += 1
     elif int(adivinanza) < int(numero): 
         print("El numero es mas grande")
+        score += 1
     elif int(adivinanza) == int(numero): 
         print("Felicitaciones! Lo encontraste!")
+        print(f"Encontraste el numero en {score} intentos!")
         break
-    
- 
-
